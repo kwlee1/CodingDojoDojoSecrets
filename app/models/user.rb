@@ -4,4 +4,8 @@ class User < ActiveRecord::Base
   validates :name, :email, :password, presence: true
   validates :email, uniqueness: true 
   validates :email, uniqueness: { case_sensitive: false }, format: { with: EMAIL_REGEX }
+  before_save :email_lowercase
+  def email_lowercase
+    email.downcase!
+  end 
 end

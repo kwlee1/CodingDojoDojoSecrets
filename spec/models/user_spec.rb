@@ -10,7 +10,7 @@ RSpec.describe User, type: :model do
       expect(build(:user).password_digest.present?).to eq(true)
     end 
     it "email as lowercase" do 
-      expect(create(:user,email: 'EMAIL@GMAIL>COM').email).to eq("email@gmail.com")
+      expect(create(:user,email: 'EMAIL@GMAIL.COM').email).to eq("email@gmail.com")
     end 
   end 
   context "with invalid attributes should not save if" do 
