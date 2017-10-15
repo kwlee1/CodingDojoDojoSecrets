@@ -1,2 +1,8 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<form action="/sessions" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  Name: <input type="text" name="Name"><br>
+  Email: <input type="text" name="Email"><br>
+  Password: <input type="text" name="Password"><br>
+  Confirm Password: <input type="text" name="Password_Confirmation"><br>
+  <input type="submit" value="Log In">
+</form>
