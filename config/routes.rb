@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'secrets/index'
+
   resources :sessions
   resources :users
+  resources :secrets
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
